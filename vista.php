@@ -1,474 +1,481 @@
 <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-12" id="contenido">
+
+        <!-- FORMULARIO ALTA / MODIFICACION USUARIO -->
+        <div id="form_alta" class="col-md-12">
+
+            <!--PORTADA CARRUSEL IMAGENES-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner" role="listbox">
+                    <div id="pantalla_1" class="col-md-12 item active portada" style="background-color: #ecf0f5 ">
+                        <img src="http://10.228.69.100/viki_dev/paginas/blablaK/img/portada.png"></img>
+                    </div>
+
+
+                    <div id="pantalla_2" class="col-md-12 item portada" style="background-color: #ecf0f5 ">
+                        <img src="http://10.228.69.100/viki_dev/paginas/blablaK/img/slide2.png"></img>
+                    </div>
+
+
+                    <div id="pantalla_3" class="col-md-12 item portada" style="background-color: #ecf0f5 ">
+                        <img src="http://10.228.69.100/viki_dev/paginas/blablaK/img/portada.png"></img>
+                    </div>
+
+                    <div id="pantalla_4" class="col-md-12 item portada" style="background-color: #ecf0f5 ">
+                        <img src="http://10.228.69.100/viki_dev/paginas/blablaK/img/slide3.png"></img>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE USUARIO LOGADO -->
+            <div id="wrap_datos_personales" class="col-md-12">
+
+                <div id="wrap_usuario" class="col-md-3">
+                    <div class="form-group">
+                        <label for="usuario"><b>Usuario</b></label>
+                        <input type="text" id="usuario" class="form-control input_guardar" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_meta4" class="col-md-3">
+                    <div class="form-group">
+                        <label for="meta4"><b>Meta4</b></label>
+                        <input type="text" id="meta4" class="form-control input_guardar" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_departamento" class="col-md-3">
+                    <div class="form-group">
+                        <label for="departamento"><b>Departamento</b></label>
+                        <input type="text" id="departamento" class="form-control input_guardar" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_telefono" class="col-md-3">
+                    <div class="form-group">
+                        <label id="label_telefono" for="telefono"><b>Telefono</b></label>
+                        <input type="text" id="telefono" class="form-control input_guardar" placeholder="Consulta politica de datos" &uarr disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_consentimiento" class="col-md-3">
+                    <div class="form-group">
+                        <label id="label_consentimiento" for="consentimiento"><b>Consentimiento</b></label>
+                        <input type="text" id="consentimiento" class="form-control input_guardar" disabled>
+                    </div>
+                </div>
+                <div id="wrap_id" class="col-md-3">
+                    <div class="form-group">
+                        <label id="label_id" for="id"><b>ID</b></label>
+                        <input type="text" id="id" class="form-control input_guardar" disabled>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BLOQUE DATOS TRAYECTO -->
+            <div id="wrap_datos_trayecto" class="col-md-12">
+
+                <div id="wrap_tipo_servicio" class="col-md-3">
+                    <div class="form-group">
+                        <label for="tipo_servicio"><b>Quiero...</b></label>
+                        <select id="tipo_servicio" class="form-control input_guardar">
+                            <option hidden value="">Selecciona una opcion</option>
+                            <option value="ofrecer">Ofrecer mi coche</option>
+                            <option value="solicitar">Buscar coche</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="wrap_tipo_trayecto" class="col-md-3">
+                    <div class="form-group">
+                        <label for="tipo_trayecto"><b>Trayecto</b></label>
+                        <select id="tipo_trayecto" class="form-control input_guardar">
+                            <option hidden value="">Selecciona ida o vuelta</option>
+                            <option value="ida">Sólo Ida</option>
+                            <option value="vuelta">Sólo Vuelta</option>
+                            <option>Ida y Vuelta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="wrap_entrada" class="col-md-3">
+                    <div class="form-group">
+                        <label for="entrada"><b>Hora de entrada</b></label>
+                        <input type="time" id="entrada" class="form-control input_guardar">
+                    </div>
+                </div>
+
+                <div id="wrap_salida" class="col-md-3">
+                    <div class="form-group">
+                        <label for="salida"><b>Hora de salida</b></label>
+                        <input type="time" id="salida" class="form-control input_guardar">
+                    </div>
+                </div>
+
+                <!-- DIAS DE LA SEMANA -->
+                <div id="wrap_dias_semana" class="col-md-12">
+                    <label for="dias_semana"><b>Selecciona los dias para compartir:</b></label>
+                    <div class="weekDays-selector">
+                        <input type="checkbox" id="lunes" class="weekday" />
+                        <label for="lunes">Lunes</label>
+                        <input type="checkbox" id="martes" class="weekday" />
+                        <label for="martes">Martes</label>
+                        <input type="checkbox" id="miercoles" class="weekday" />
+                        <label for="miercoles">Miércoles</label>
+                        <input type="checkbox" id="jueves" class="weekday" />
+                        <label for="jueves">Jueves</label>
+                        <input type="checkbox" id="viernes" class="weekday" />
+                        <label for="viernes">Viernes</label>
+                        <input type="checkbox" id="sabado" class="weekday" />
+                        <label for="sabado">Sábado</label>
+                        <input type="checkbox" id="domingo" class="weekday" />
+                        <label for="domingo">Domingo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOQUE ORIGEN Y DESTINO -->
+            <div id="wrap_origen_y_destino" class="col-md-12">
+
+                <!-- DATOS ORIGEN -->
+                <div id="wrap_datos_origen" class="col-md-12">
+
+                    <div id="wrap_origen" class="col-md-3 datos_origen">
+                        <div class="form-group">
+                            <label for="origen"><b>Origen</b></label>
+                            <select id="origen" class="form-control input_guardar menos_letra">
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div id="wrap_zona_origen" class="col-md-6 datos_origen">
+                        <div class="form-group">
+                            <label for="zona_origen"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                            <input type="textarea" id="zona_origen" class="form-control input_guardar" rows="2">
+                        </div>
+                    </div>
+
+                    <div id="wrap_btn_puntos_parada_origen" class="col-md-3 datos_origen">
+                        <div class="form-group">
+                            <label for="puntos_parada_ida"><b>Pulsa aqui para añadir puntos donde recoger a otros compis</b></label>
+                            <button type="button" id="btn_puntos_parada_ida" class="btn-primary form-control"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- DATOS DESTINO -->
+                <div id="wrap_datos_destino" class="col-md-12">
+
+                    <div id="wrap_destino" class="col-md-3 datos_destino">
+                        <div class="form-group">
+                            <label for="destino"><b>Destino</b></label>
+                            <select id="destino" class="form-control input_guardar">
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div id="wrap_zona_destino" class="col-md-6 datos_destino">
+                        <div class="form-group">
+                            <label for="zona_destino"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                            <input type="textarea" id="zona_destino" class="form-control input_guardar" rows="2">
+                        </div>
+                    </div>
+
+                    <div id="wrap_btn_puntos_parada_destino" class="col-md-3 datos_destino">
+                        <div class="form-group">
+                            <label for="puntos_parada_vuelta"><b>Pulsa aqui para añadir puntos donde dejar a otros compis</b></label>
+                            <button type="button" id="btn_puntos_parada_vuelta" class="btn-primary form-control "><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATOS PUNTOS DE ENCUENTRO -->
+                <div id="puntos_de_encuentro" class="col-md-12">
+                    <!-- DATOS PUNTO 1 -->
+                    <div id="wrap_datos_punto1" class="col-md-12">
+                        <div id="wrap_punto1" class="col-md-3 datos_punto1">
+                            <div class="form-group">
+                                <label for="punto1_municipio"><b>Punto 1</b></label>
+                                <select id="punto1_municipio" class="form-control input_guardar menos_letra">
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div id="wrap_zona_punto1" class="col-md-8 datos_punto1">
+                            <div class="form-group" id="botonera_punto1">
+                                <label for="punto1_zona"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                                <input type="textarea" id="punto1_zona" class="form-control input_guardar" rows="2">
+                            </div>
+                        </div>
+
+
+                        <div id="wrap_botonera_1" class="col-md-1 datos_punto1">
+                            <div class="form-group col-md-12" id="botonera_punto1">
+                                <div id="wrap_annadir_punto2" class="col-md-6 annadir_punto">
+                                    <i id="annadir_punto2" class="fa fa-check btn clase_annadir_punto"></i>
+                                </div>
+                                <div id="wrap_quitar_punto1" class="col-md-6 datos_punto1">
+                                    <i class="fa fa-close btn clase_borrar_punto btn-parada"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- DATOS PUNTO 2 -->
+                    <div id="wrap_datos_punto2" class="col-md-12">
+                        <div id="wrap_punto2" class="col-md-3 datos_punto2">
+                            <div class="form-group">
+                                <label for="punto2_municipio"><b>Punto 2</b></label>
+                                <select id="punto2_municipio" class="form-control input_guardar menos_letra">
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div id="wrap_zona_punto2" class="col-md-8 datos_punto2">
+                            <div class="form-group">
+                                <label for="punto2_zona"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                                <input type="textarea" id="punto2_zona" class="form-control input_guardar" rows="2">
+                            </div>
+                        </div>
+
+                        <div id="wrap_botonera_2" class="col-md-1 datos_punto2">
+                            <div class="form-group col-md-12" id="botonera_punto2 ">
+                                <div id="wrap_annadir_punto3" class="col-md-6 annadir_punto">
+                                    <i id="annadir_punto3" class="fa fa-check btn clase_annadir_punto"></i>
+                                </div>
+                                <div id="wrap_quitar_punto2" class="col-md-6 datos_punto2">
+                                    <i class="fa fa-close btn clase_borrar_punto btn-parada"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- DATOS PUNTO 3 -->
+                    <div id="wrap_datos_punto3" class="col-md-12">
+                        <div id="wrap_punto3" class="col-md-3 datos_punto3">
+                            <div class="form-group">
+                                <label for="punto3_municipio"><b>Punto 3</b></label>
+                                <select id="punto3_municipio" class="form-control input_guardar menos_letra">
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div id="wrap_zona_punto3" class="col-md-8 datos_punto3">
+                            <div class="form-group">
+                                <label for="punto3_zona"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                                <input type="textarea" id="punto3_zona" class="form-control input_guardar" rows="2">
+                            </div>
+                        </div>
+
+                        <div id="wrap_botonera_3" class="col-md-1 datos_punto3">
+                            <div class="form-group col-md-12" id="botonera_punto3">
+                                <div id="wrap_annadir_punto4" class="col-md-6 annadir_punto">
+                                    <i id="annadir_punto4" class="fa fa-check btn clase_annadir_punto"></i>
+                                </div>
+                                <div id="wrap_quitar_punto3" class="col-md-6 datos_punto3">
+                                    <i class="fa fa-close btn clase_borrar_punto btn-parada"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- DATOS PUNTO 4 -->
+                    <div id="wrap_datos_punto4" class="col-md-12">
+                        <div id="wrap_punto4" class="col-md-3 datos_punto4">
+                            <div class="form-group">
+                                <label for="punto4_municipio"><b>Punto 4</b></label>
+                                <select id="punto4_municipio" class="form-control input_guardar menos_letra">
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                        <div id="wrap_zona_punto4" class="col-md-8 datos_punto4">
+                            <div class="form-group">
+                                <label for="punto4_zona"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                                <input type="textarea" id="punto4_zona" class="form-control input_guardar" rows="2">
+                            </div>
+                        </div>
+
+                        <div id="wrap_botonera_4" class="col-md-1 datos_punto4">
+                            <div class="form-group col-md-12" id="botonera_punto4">
+                                <div id="wrap_annadir_punto5" class="col-md-6 annadir_punto">
+                                    <i id="annadir_punto5" class="fa fa-check btn clase_annadir_punto"></i>
+                                </div>
+                                <div id="wrap_quitar_punto4" class="col-md-6 datos_punto4">
+                                    <i class="fa fa-close btn clase_borrar_punto btn-parada"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- DATOS PUNTO 5 -->
+                    <div id="wrap_datos_punto5" class="col-md-12">
+                        <div id="wrap_punto5" class="col-md-3 datos_punto5">
+                            <div class="form-group">
+                                <label for="punto5_municipio"><b>Punto 5</b></label>
+                                <select id="punto5_municipio" class="form-control input_guardar menos_letra">
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="wrap_zona_punto5" class="col-md-8 datos_punto5">
+                            <div class="form-group">
+                                <label for="punto5_zona"><b>Zona (Barrio, rotonda, esquina...)</b></label>
+                                <input type="textarea" id="punto5_zona" class="form-control input_guardar" rows="2">
+                            </div>
+                        </div>
+
+                        <div id="wrap_botonera_5" class="col-md-1 datos_punto5">
+                            <div class="form-group col-md-12" id="botonera_punto5">
+
+                                <div id="wrap_quitar_punto5" class="col-md-6 datos_punto5">
+                                    <i class="fa fa-close btn clase_borrar_punto btn-parada"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-10"></div>
+
+                    <div id="wrap_guardar_datos" class="col-md-2">
+                        <div class="form-group">
+                            <div id="wrap_guardar">
+                                <button class="btn btn-success fa fa-save form-control" id="btn-guardar"> Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="form_datos" class="col-md-12">
+
+            <!-- IDA ALMACENADA -->
+            <div id="wrap_datos_t1_horario" class="col-md-12">
+
+                <div id="wrap_datos_t1_entrada" class="col-md-2">
+                    <div class="form-group">
+                        <label for="datos_t1_entrada"><b>Hora de entrada</b></label>
+                        <input type="time" id="datos_t1_entrada" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+                <div id="wrap_datos_t1_tipo_trayecto" class="col-md-2">
+                    <div class="form-group">
+                        <label for="datos_t1_tipo_trayecto"><b>Trayecto de...</b></label>
+                        <input type="text" id="datos_t1_tipo_trayecto" class="form-control" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_datos_t1_origen" class="col-md-3">
+                    <div class="form-group">
+                        <label for="datos_t1_origen"><b>Origen</b></label>
+                        <input type="text" id="datos_t1_origen" class="form-control menos_letra" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_datos_t1_zona_origen" class="col-md-3">
+                    <div class="form-group">
+                        <label for="_datos_t1_zona_origen"><b>Zona origen</b></label>
+                        <input type="text" id="datos_t1_zona_origen" class="form-control" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_editar_datos" class="col-md-2">
+                    <label for="datos_origen_y_destino" style="color: transparent;"><b>btn</b></label>
+                    <button type="button " id="btn_editar_datos_t1" class="btn btn-primary  form-control">
+                    </button>
+                </div>
+
+            </div>
+
+            <!--VUELTA ALMACENADA -->
+            <div id="wrap_datos_t2_horario" class="col-md-12">
+
+                <div id="wrap_datos_t2_salida" class="col-md-2">
+                    <div class="form-group">
+                        <label for="datos_t2_salida"><b>Hora de salida</b></label>
+                        <input type="time" id="datos_t2_salida" class="form-control" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_datos_t2_tipo_trayecto" class="col-md-2">
+                    <div class="form-group">
+                        <label for="datos_t2_tipo_trayecto"><b>Trayecto de...</b></label>
+                        <input type="text" id="datos_t2_tipo_trayecto" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+
+                <div id="wrap_datos_t2_destino" class="col-md-3">
+                    <div class="form-group">
+                        <label for="datos_t2_destino"><b>Destino</b></label>
+                        <input type="text" id="datos_t2_destino" class="form-control menos_letra" disabled>
+                    </div>
+                </div>
+
+                <div id="wrap_datos_t2_zona_destino" class="col-md-3">
+                    <div class="form-group">
+                        <label for="datos_t2_zona_destino"><b>Zona destino</b></label>
+                        <input type="text" id="datos_t2_zona_destino" class="form-control" disabled>
+                    </div>
+                </div>
+                <!-- <div class="col-md-10"></div> -->
+                <div id="wrap_editar_datos" class="col-md-2">
+                    <label for="datos_origen_y_destino" style="color: transparent;"><b>btn</b></label>
+                    <button type="button " id="btn_editar_datos_t2" class="btn btn-primary  form-control">
+                     </button>
+                </div>
+            </div>
+
+
+            <div id="wrap_compatibles_t1" class="col-md-12">
+                <center><label style="font-weight:bold;font-size:16px">Matches Ida</label></center>
+                <table id="tabla_compatibles_t1" class="table"></table>
+            </div>
+            <div id="wrap_compatibles_t2" class="col-md-12" style="overflow-x: scroll;">
+
+                <center><label style="font-weight:bold;font-size:16px">Matches Vuelta</label></center>
+                <table id="tabla_compatibles_t2" class="table"></table>
+            </div>
+        </div>
+
+
+    </div>
 
-        <div id="wrap_informes" class="col-md-12">
-
-            <!-- ELECCION DE DESARROLLO -->
-            <div class="col-md-12" style="margin-bottom: 10px;">
-
-                <h1 class="text-center lead">¿Quieres crear una nueva herramienta? ¿Vas a solicitar una modificacion?¿Has detectado un error? ¿O sólo quieres ver el estado del desarrollo?</h1>
-
-                <div class="col-md-12 text-center">
-                    <div class="btn-group" role="group">
-                        <?php if (usuario_logado('usuario') == 'LCORNEJ5' || tiene_rol('desarrollo_operativo')) : ?>
-
-                            <button type="button" id="btn_desarrollos_actuales" class="btn btn-primary">Desarrollos actuales</button>
-
-                        <?php endif; ?>
-
-                        <button type="button" id="btn_nueva_herramienta" class="btn btn-success">Nueva herramienta</button>
-                        <button type="button" id="btn_modificar_herramienta" class="btn btn-warning">Modificar herramienta</button>
-                        <button type="button" id="btn_ver_estado_desarrollo" class="btn btn-info">Ver estado desarrollo</button>
-                        <button type="button" id="btn_notificar_error" class="btn btn-danger">Notificar errores</button>
-                        <?php if (usuario_logado('usuario') == 'LCORNEJ5' || tiene_rol('desarrollo_operativo')) : ?>
-
-                            <button type="button" id="btn_desarrollos_inactivos" class="btn btn-primary">Desarrollos inactivos</button>
-
-                        <?php endif; ?>
-
-                    </div>
-                    <a target="_blank" href="http://10.228.69.100/viki/paginas/tareas_desarrollo/Manuales/Manual_Solicitudes_Desarrollo.pdf"><img class="imagen_manual" src="http://10.228.69.100/viki/paginas/tareas_desarrollo/img/icono_pdf.png" /></a>
-
-                </div>
-            </div>
-
-            <!-- VACIO PARA CENTRAR   -->
-            <div class="col-md-1">
-                <div class="form-group"></div>
-            </div>
-
-            <!-- WRAP ELECCION -->
-            <div id="wrap_elecion" class="col-md-10">
-                <?php if (usuario_logado('usuario') == 'LCORNEJ5' || tiene_rol('desarrollo_operativo')) : ?>
-                    <!-- DESARROLLOS ACTUALES -->
-                    <div id="desarrollos_actuales" class="col-md-12">
-
-                        <h1 class="text-center">Desarrollos actuales en los que se está trabajando</h1>
-
-                        <div class="col-md-3">
-                            <label for="desarrollos_actuales_asignadas">Herramientas asignadas</label>
-                            <div id="desarrollos_actuales_asignadas" class="list-group"></div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="desarrollos_actuales_notas">Info del desarrollo</label>
-
-                                <div id="desarrollos_actuales_notas" class="form-control" disabled>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="desarrollos_actuales_en_cola">Herramientas en cola</label>
-                            <div id="desarrollos_actuales_en_cola" class="list-group"></div>
-
-                            <div class="form-group float:right">
-                                <button type="button" id="actual_asignar" class="btn btn-block btn-primary">Asignar</button>
-                            </div>
-                            <div class="form-group">
-                                <button type="button" id="parte_trabajo" data-toggle="modal" data-target="#parte_modal" class="btn btn-block btn-primary" data-to><i class="fa fa-fw fa-book"></i> Diario de trabajo</button>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-9">
-                            <div class="form-group">
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!-- DESARROLLOS INACTIVOS -->
-                    <div id="desarrollos_inactivos" class="col-md-12">
-
-                        <h1 class="text-center">Histórico de tareas realizadas por el equipo de Desarrollo</h1>
-
-                        <div class="col-md-12">
-                            <table id='tabla_historico_trabajo' class="table table-striped table-hover table-responsive"></table>
-                        </div>
-
-                    </div>
-
-
-                <?php endif; ?>
-
-                <!-- NUEVA HERRAMIENTA -->
-                <div id="nueva_herramienta" class="col-md-12">
-
-                    <h1 class="text-center">Formulario para crear una nueva herramienta</h1>
-
-                    <div class="col-md-6">
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="nueva_herramienta_nombre">Nombre de la herramienta <span class="text-danger">(<b>Ejemplo:</b> modulo_nuevo_fcr)</span></label>
-                                <input type="text" id="nueva_herramienta_nombre" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="nueva_herramienta_menu">Menu donde añadir</label>
-                                <select id="nueva_herramienta_menu" name="filtro_ubicacion" class="form-control input-guardar"></select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="nueva_herramienta_submenu">Submenu donde añadir</label>
-                                <select id="nueva_herramienta_submenu" name="filtro_ubicacion" class="form-control input-guardar">
-                                    <option value="" hidden> Selecciona un submenú</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="alert alert-danger">
-                                <p class="text-center"><b>Info del formulario</b></p>
-                                <p><b>Nombre herramienta: </b> Define el nombre que quieres ponerle a la herramienta</p>
-                                <p><b>Menu donde añadir: </b> En que menu quieres que se aloje la herramienta, ADMINISTRACION, BAJAS, FONDOS, APP.SALA, JUEGOS...</p>
-                                <p><b>Submenu donde añadir: </b> En que submenu quieres que se aloje la herramienta, Juegos sala, APP´s, Auditorias...</p>
-                                <p><b>Explicacion del desarrollo: </b> Cuentanos que quieres desarrollar, asi como todo lo que tenemos que tener en cuenta.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="nueva_herramienta_notas">Explicacion del desarrollo</label>
-                            <textarea id="nueva_herramienta_notas" class="form-control area"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- VACIO PARA CUADRAR -->
-                    <div class="col-md-9">
-                        <div class="form-group">
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <button type="button" id="nueva_herramienta_guardar" class="btn btn-block btn-primary"><i class="fa fa-fw fa-save"></i> Guardar</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- MODIFICAR HERRAMIENTA -->
-                <div id="modificar_herramienta" class="col-md-12">
-
-                    <h1 class="text-center">Formulario para solicitar una modificacion</h1>
-
-                    <div class="col-md-6">
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="modificar_herramienta_nombre">URL de la herramienta</label>
-                                <input type="text" id="modificar_herramienta_nombre" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <img src="<?= base_url() . 'paginas/tareas_desarrollo/img/nombre_herramienta.png' ?>" alt="" class="responsive" id="img">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-12">
-                            <div class="alert alert-danger">
-                                <p class="text-center"><b>Info del formulario</b></p>
-                                <p><b>URL de la herramienta: </b>Coloca la dirección de la herramienta que quieres comprobar, solo lo que aparece enmarcado en la imagen superior.</p>
-                                <p><b>Explicacion de la modificacion: </b> Explicacion de las modificaciones a realizar, si vas a complementar con un email, dejalo anotado.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="modificar_herramienta_notas">Explicacion de las modificaciones</label>
-                            <textarea id="modificar_herramienta_notas" class="form-control area"></textarea>
-                        </div>
-                    </div>
-
-                    <!-- VACIO PARA CUADRAR -->
-                    <div class="col-md-9">
-                        <div class="form-group">
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <button type="button" id="modificar_herramienta_guardar" class="btn btn-block btn-primary"><i class="fa fa-fw fa-save"></i> Guardar</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- VER ESTADO DESARROLLO -->
-                <div id="ver_estado_desarrollo" class="col-md-12">
-
-                    <h1 class="text-center">Ver el estado del desarrollo y los avances realizados</h1>
-
-                    <div class="col-md-6">
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="ver_estado_desarrollo_nombre">URL de la herramienta</label>
-
-                                <div class="input-group">
-                                    <input type="text" id="ver_estado_desarrollo_nombre" class="form-control">
-                                    <div class="input-group-btn">
-                                        <button id="btn_estado_bucar" class="btn btn-default btn-info" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <img src="<?= base_url() . 'paginas/tareas_desarrollo/img/nombre_herramienta.png' ?>" alt="" class="responsive" id="img">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-
-
-
-                            <div class="col-md-6" id='historico_solicitado'>
-                                <div class="form-group">
-                                    <label for="historico_solicitado">Herramientas solicitadas en el último mes</label>
-                                    <textarea id="ver_historico_solicitado" class="form-control" disabled></textarea>
-
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="col-md-6" id='notas_nuevas'>
-                                <div class="form-group">
-                                    <label for="ver_estado_desarrollo_notas_nuevas">Dejar una nota</label>
-                                    <textarea id="ver_estado_desarrollo_notas_nuevas" class="form-control"></textarea>
-                                    <br />
-
-                                    <button type="button" id="agregar_nota" class="btn btn-block btn-primary boton_nota"><i class="fa fa-pencil"></i> Agregar nota</button>
-
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-12">
-                            </br>
-                            <div class="alert alert-danger">
-                                <p class="text-center"><b>Info del formulario</b></p>
-                                <p><b>URL de la herramienta: </b>Coloca la dirección de la herramienta que quieres comprobar, solo lo que aparece enmarcado en la imagen superior.</p>
-                                <p><b>Herramientas solicitadas en el último mes: </b>Aquí puedes ver el historico de lo que tu nos has solicitado.</p>
-                                <p><b>Deja una nota: </b> Si quieres que el equipo de desarrollo lo tenga en cuenta.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="ver_estado_desarrollo_notas_anteriores">Estado del desarrollo</label>
-                            <textarea id="ver_estado_desarrollo_notas_anteriores" class="form-control .estado_anterior area" disabled></textarea>
-                        </div>
-                    </div>
-
-
-                    <!-- VACIO PARA CUADRAR -->
-                    <div class="col-md-9">
-                        <div class="form-group">
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <button type="button" id="ver_estado_desarrollo_guardar" class="btn btn-block btn-primary"><i class="fa fa-fw fa-save"></i> Guardar</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- NOTIFICAR ERROR -->
-                <div id="notificar_error" class="col-md-12">
-
-                    <h1 class="text-center">Formulario para notificar un error en una herramienta</h1>
-                    <div class="col-md-6">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <br>
-                                <label for="agregar_nombre_error">URL de la herramienta</label>
-                                <input name="archivoSubir" type="text" id="agregar_nombre_error" class="form-control input-app-error">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <img src="<?= base_url() . 'paginas/tareas_desarrollo/img/nombre_herramienta.png' ?>" alt="" class="responsive" id="img">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="agregar_nota_error">Describe el error</label>
-                                <textarea name="archivoSubir" id="agregar_nota_error" class="form-control input-app-error"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="alert alert-danger">
-                                <p class="text-center"><b>Info del formulario</b></p>
-                                <p><b>URL de la herramienta: </b> Coloca la dirección de la herramienta que quieres notificar , solo lo que aparece enmarcado en la imagen superior.</p>
-                                <p><b>Explicacion del error: </b> Explicacion del error que aparece.</p>
-                                <p><b>Pantallazo: </b> Pasanos un pantallazo para que podamos comprobarlo.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <br>
-                        <label for="inp_fichero">¿Tienes un pantallazo del error?</label>
-                        <form role="form" class="formulario_fichero file__droparea" enctype="multipart/form-data">
-                            <span class="file__droparea-fileText sombra"></span>
-                            <i class="fa fa-cloud-upload file__droparea-icon sombra"></i>
-                            <span class="file__droparea-msg sombra"> Arrastra y suelta aqu&iacute; </span>
-                            <div id="cargar_imagen" style="float:left"></div>
-                            <button class="btn btn-primary file__droparea-btn" id="file__droparea-btn"> archivo </button>
-                            <input type="file" name="archivo" id="inp_fichero" class="file__droparea-input">
-                        </form>
-
-                    </div>
-
-
-                    <!-- VACIO PARA CUADRAR -->
-                    <div class="col-md-9">
-                        <div class="form-group">
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <button type="button" id="inp_cargar" class="btn btn-block btn-primary"><i class="fa fa-fw fa-save"></i> Guardar</button>
-                        </div>
-                    </div>
-
-
-
-                </div>
-
-                <!-- VACIO PARA CENTRAR   -->
-                <div class="col-md-1">
-                    <div class="form-group">
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-
-        <!-- MODAL COMENTARIO HERRAMIENTA CAMBIO DE ESTADO -->
-
-        <div class="modal fade" id="comentario_modal" role="dialog" aria-labelledby="comentario_modal_label" aria-hidden="true">
-            <div class="modal-dialog" role="document" style="width: 50%;">
-                <div class="modal-content" style="min-height: 40vh;">
-
-                    <div class="modal-header">
-
-                        <label>
-                            <h1>Notas y cambios de estado del equipo de desarrollo</h1>
-                        </label><i class="fa fa-close fa-lg pull-right cerrar_modal" data-dismiss="modal" aria-label="Close" id="cruz_cerrar"></i>
-                    </div>
-
-                    <div class="modal-body informe">
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="herramienta_notas">Deja un comentario</label>
-
-                                    <textarea id="herramienta_notas" class="form-control"></textarea>
-                                    <br />
-                                    <label>Estado al que cambiar </label><span class="text-danger"> (<b>Si no lo cambias permanecerá en desarrollo</b>)</span></label>
-                                    <select id="filtro_estado" name="filtro_estado" class="form-control input-guardar">
-                                        <option value="DESARROLLO" hidden> DESARROLLO</option>
-                                        <option value="PENDIENTE">PENDIENTE</option>
-                                        <option value="PARALIZADA">PARALIZADA</option>
-                                        <option value="FINALIZADA">FINALIZADA</option>
-                                    </select>
-
-                                </div>
-                            </div>
-                            <div class="col-md-9"></div>
-                            <div class="col-md-3">
-
-                                <button type="button" id="guardar_nota" class="btn btn-block btn-primary"><i class="fa fa-fw fa-save"></i> Guardar</button>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- MODAL DIARIO DE TRABAJO -->
-        <div class="modal fade" id="parte_modal" role="dialog" aria-labelledby="parte_modal_label" aria-hidden="true">
-            <div class="modal-dialog" role="document" style="width: 80%;">
-                <div class="modal-content" style="min-height: 80vh;">
-
-                    <div class="modal-header">
-
-                        <label>
-                            <h1>Diario de trabajo del equipo de desarrollo</h1>
-                        </label><i class="fa fa-close fa-lg pull-right cerrar_modal" data-dismiss="modal" aria-label="Close" id="cruz_cerrar"></i>
-                    </div>
-
-                    <div class="modal-body informe">
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table id='tabla_parte_trabajo' class="table table-striped table-hover table-responsive"></table>
-                            </div>
-
-                            <div class="col-md-12" id="wrap_botonera_exportacion">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-4" id="botonera_exportacion">
-                                    <button id="exportar_informe" class="col-md-12 btn btn-success"><i class="fa fa-file-excel-o"></i> Exportar a Excel</button>
-                                </div>
-                                <div class="col-md-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-    <!-- MENSAJE DE CARGA -->
-    <div class="loader_ajax" style="display: none;"></div>
 </div>
